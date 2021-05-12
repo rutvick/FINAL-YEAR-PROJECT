@@ -1,0 +1,142 @@
+<%- include('../includes/head.ejs') %>
+
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
+    <!-- Bootstrap4 files-->
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font awesome 5 -->
+    <link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+
+    <!-- custom style -->
+    <link href="css/ui.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+
+    <!-- custom javascript -->
+    <script src="js/script.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+/// some script
+
+    </script>
+    </head>
+
+    <body>
+
+
+        <header class="section-header">
+            <section class="header-main border-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2 col-4">
+                            <div class="brand-wrap">
+                                <img class="logo" src="images/360.jpg">
+                            </div> <!-- brand-wrap.// -->
+                        </div>
+                    </div> <!-- col.// -->
+                </div> <!-- container.// -->
+            </section> <!-- header-main .// -->
+        </header> <!-- section-header.// -->
+        <nav class="navbar navbar-main navbar-expand-md navbar-light border-top border-bottom" style="background-color: cornflowerblue;">
+            <div class="container">
+              <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/admin-products">All Products</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Smartphones </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/laptops">Laptops</a>
+                  </li>
+                
+                  <li class="nav-item">
+                    <a class="nav-link" href="/audios">Audio</a>
+                  </li>
+                </ul>
+              </div> <!-- collapse .// -->
+            </div> <!-- container .// -->
+          </nav>
+
+	<div class="card border-gray-light mx-auto" style="max-width: 700px; margin-top:100px;">
+        <div class="card-body">
+        <h4 class="card-title mb-4" style="color:rgb(67, 67, 241);">Add Products</h4>
+        <form class="product-form" action="/admin/<% if(editing) { %>smartphones<% } else { %>add-product<% } %>" method="POST">
+            <div class="form-group">
+               <label >ProductID</label>
+               <input type="text" name="productid" id="productid" class="form-control" value="<% if(editing) { %><%= product.productid %><% } %>">
+            </div>
+            <div class="form-group"> 
+                <label >Brand Name</label>
+                <input type="text" name="brandname" id="brandname" class="form-control" value="<% if(editing) { %><%= product.brandname %><% } %>">
+            </div>
+            <div class="form-group">
+                <label >Model Name</label>
+                <input type="text" name="modelname" id="modelname" class="form-control" value="<% if(editing) { %><%= product.modelname %><% } %>">
+            </div>
+            <div class="form-group">
+                <label >Price</label>
+                <input type="number" name="price" id="price" step="0.01" class="form-control" value="<% if(editing) { %><%= product.price %><% } %>">
+            </div> 
+            <div class="form-group">
+                <label >Processor</label>
+                <input type="text" name="processor" id="processor" class="form-control" value="<% if(editing) { %><%= product.processor %><% } %>">
+            </div>
+            <div class="form-group">
+                <label >Ram</label>
+                <input type="text" name="ram" id="ram" class="form-control" value="<% if(editing) { %><%= product.ram %><% } %>">
+            </div>
+            <div class="form-group">
+                <label >Storage</label>
+                <input type="text" name="storage" id="storage" class="form-control" value="<% if(editing) { %><%= product.storage %><% } %>">
+            </div>
+            <div class="form-group">
+                <label >Battery</label>
+                <input type="text" name="battery" id="battery" class="form-control" value="<% if(editing) { %><%= product.battery %><% } %>">
+            </div>
+            <div class="form-group">
+                <label >Rear Camera</label>
+                <input type="text" name="rearcamera" id="rearcamera" class="form-control" value="<% if(editing) { %><%= product.rearcamera %><% } %>">
+            </div>
+            <div class="form-group">
+                <label>Front Camera</label>
+                <input type="text" name="frontcamera" id="frontcamera" class="form-control" value="<% if(editing) { %><%= product.frontcamera %><% } %>">
+            </div>
+            <div class="form-group">
+                <label>OS</label>
+                <input type="text" name="os" id="os" class="form-control" value="<% if(editing) { %><%= product.os %><% } %>">
+            </div>
+            <div class="form-group">
+                <label>Ratings</label>
+                <input type="text" name="ratings" id="ratings" class="form-control" value="<% if(editing) { %><%= product.ratings %><% } %>">
+            </div>
+            <div class="form-group">
+                <label>imageUrl</label>
+                <input type="text" name="imageUrl" id="imageUrl" class="form-control" value="<% if(editing) { %><%= product.imageUrL %><% } %>">
+            </div>
+            <% if(editing) { %>
+                <input type="hidden" value="<%= product.productid %>" name="productId">
+            <% } %>
+
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit"><% if(editing) { %>Update Product<% } else { %>Add Product<% } %></button>
+            </div>    
+        </form>
+        </div> 
+      </div> 
+  <!-- ============================ COMPONENT Add form  END.// ================================= -->
+  
+  
+  </section>
+
+
+
+
+        <%- include('../includes/end.ejs') %>

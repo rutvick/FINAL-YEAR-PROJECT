@@ -1,0 +1,71 @@
+<%- include('../includes/head.ejs') %>
+
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
+    <!-- Bootstrap4 files-->
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font awesome 5 -->
+    <link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+
+    <!-- custom style -->
+    <link href="css/ui.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+
+    <!-- custom javascript -->
+    <script src="js/script.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+/// some script
+
+    </script>
+    </head>
+
+    <body>
+
+
+        <header class="section-header">
+            <section class="header-main border-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2 col-4">
+                            <div class="brand-wrap">
+                                <img class="logo" src="images/360.jpg">
+                            </div> <!-- brand-wrap.// -->
+                        </div>
+                    </div> <!-- col.// -->
+                </div> <!-- container.// -->
+            </section> <!-- header-main .// -->
+        </header> <!-- section-header.// -->
+
+
+        <!-- ========================= SECTION CONTENT ========================= -->
+        <section class="section-conten padding-y" style="min-height:84vh">
+
+            <!-- ============================ COMPONENT LOGIN   ================================= -->
+            <div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Admin Login</h4>
+                    <form action='/admin-products' method="POST" style="padding: 20px;">
+                        <div class="form-group">
+                            <input name="adminID" class="form-control" placeholder="Admin ID" type="adminID">
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                            <input name="password" class="form-control" placeholder="Password" type="password">
+                        </div> <!-- form-group// -->
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block" style="background-color: lightseagreen;"> Login </button>
+                        </div> <!-- form-group// -->
+                    </form>
+                </div> <!-- card-body.// -->
+            </div> <!-- card .// -->
+            <!-- ============================ COMPONENT LOGIN  END.// ================================= -->
+        </section>
+        <!-- ========================= SECTION CONTENT END// ========================= -->
+
+        <%- include('../includes/end.ejs') %>

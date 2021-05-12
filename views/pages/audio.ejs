@@ -1,0 +1,207 @@
+<%- include('../includes/head.ejs') %>
+	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+	<!-- jQuery -->
+	<script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
+	<!-- Bootstrap4 files-->
+	<script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+	<!-- Font awesome 5 -->
+	<link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+
+	<!-- plugin: fancybox  -->
+	<script src="plugins/fancybox/fancybox.min.js" type="text/javascript"></script>
+	<link href="plugins/fancybox/fancybox.min.css" type="text/css" rel="stylesheet">
+
+	<!-- custom style -->
+	<link href="css/ui.css" rel="stylesheet" type="text/css" />
+	<link href="css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+
+	<!-- custom javascript -->
+	<script src="js/script.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		/// some script
+
+		// jquery ready start
+		$(document).ready(function () {
+			// jQuery code
+
+		});
+// jquery end
+	</script>
+
+	</head>
+
+	<body>
+
+		<header class="section-header">
+
+			<section class="header-main border-bottom">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-2 col-4">
+							<div class="brand-wrap">
+								<img class="logo" src="../images/360.jpg">
+							</div> <!-- brand-wrap.// -->
+						</div>
+
+					</div> <!-- row.// -->
+				</div> <!-- container.// -->
+			</section> <!-- header-main .// -->
+		</header> <!-- section-header.// -->
+		<%- include('../includes/navigation.ejs') %>
+
+
+
+			<!-- ========================= SECTION PAGETOP ========================= -->
+			<section class="section-pagetop bg">
+				<div class="container">
+					<h2 class="title-page">Category products</h2>
+					<nav>
+						<ol class="breadcrumb text-white">
+							<li class="breadcrumb-item"><a href="/products">smartphones</a></li>
+							<li class="breadcrumb-item"><a href="/laptop">Laptops</a></li>
+							<li class="breadcrumb-item active ">audio device</li>
+						</ol>
+					</nav>
+				</div> <!-- container //  -->
+			</section>
+			<!-- ========================= SECTION INTRO END// ========================= -->
+
+			<!-- ========================= SECTION CONTENT ========================= -->
+			<section class="section-content padding-y">
+				<div class="container">
+
+					<div class="row">
+						<aside class="col-md-3">
+
+							<div class="card">
+								<form action="/audio" method="POST">
+									<article class="filter-group">
+										<header class="card-header">
+											<a href="#" data-toggle="collapse" data-target="#collapse_2"
+												aria-expanded="true" class="">
+												<i class="icon-control fa fa-chevron-down"></i>
+												<h6 class="title">Brands </h6>
+											</a>
+										</header>
+										<div class="filter-content collapse show" id="collapse_2" style="">
+											<div class="card-body">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" checked="" class="custom-control-input">
+													<div class="custom-control-label">Apple
+														<b class="badge badge-pill badge-light float-right">2</b>
+													</div>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" checked="" class="custom-control-input">
+													<div class="custom-control-label">Boat
+														<b class="badge badge-pill badge-light float-right">20</b>
+													</div>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" checked="" class="custom-control-input">
+													<div class="custom-control-label">JBL
+														<b class="badge badge-pill badge-light float-right">8</b>
+													</div>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" checked="" class="custom-control-input">
+													<div class="custom-control-label">Sony
+														<b class="badge badge-pill badge-light float-right">8</b>
+													</div>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<div class="custom-control-label">Zebronics
+														<b class="badge badge-pill badge-light float-right">15</b>
+													</div>
+												</label>
+											</div> <!-- card-body.// -->
+										</div>
+									</article> <!-- filter-group .// -->
+
+									<article class="filter-group">
+
+										<div class="filter-content collapse show" id="collapse_3" style="">
+											<div class="card-body">
+
+												<div class="form-row">
+													<div class="form-group col-md-6">
+														<label>Min</label>
+														<input class="form-control" name="minimum" id="minimum"
+															placeholder="90" type="number">
+													</div>
+													<div class="form-group text-right col-md-6">
+														<label>Max</label>
+														<input class="form-control" name="maximum" id="maximum"
+															placeholder="8000" type="number">
+													</div>
+												</div> <!-- form-row.// -->
+												<button class="btn btn-block btn-primary" type="submit">Apply</button>
+											</div><!-- card-body.// -->
+										</div>
+									</article> <!-- filter-group .// -->
+								</form>
+						</aside> <!-- col.// -->
+						<main class="col-md-9">
+
+
+
+
+							<div class="row">
+								<% if(prods.length>0) { %>
+									<% for (let product of prods) { %>
+
+										<div class="col-md-4">
+
+											<figure class="card card-product-grid">
+												<div class="img-wrap">
+
+													<img src="<%= product.imageUrL %>">
+												</div> <!-- img-wrap.// -->
+												<figcaption class="info-wrap">
+													<div class="fix-height">
+														<a href="#" class="title">
+															<%= product.modelname %>
+														</a>
+														<div class="price-wrap mt-2">
+															<span class="price">
+																<%= product.price %>
+															</span>
+
+														</div> <!-- price-wrap.// -->
+													</div>
+													<a href="#" class="btn btn-block btn-primary">Add to cart </a>
+												</figcaption>
+											</figure>
+
+										</div>
+										<% } %>
+											<% } else { %>
+												<h1> no product found</h1><!-- col.// -->
+												<% } %>
+							</div> <!-- row end.// -->
+
+							<nav class="mt-4" aria-label="Page navigation sample">
+								<ul class="pagination">
+									<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+									<li class="page-item active"><a class="page-link" href="#">1</a></li>
+									<li class="page-item"><a class="page-link" href="#">2</a></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item"><a class="page-link" href="#">Next</a></li>
+								</ul>
+							</nav>
+
+						</main> <!-- col.// -->
+
+					</div>
+
+				</div> <!-- container .//  -->
+			</section>
+			<!-- ========================= SECTION CONTENT END// ========================= -->
+
+			<%- include('../includes/end.ejs') %>

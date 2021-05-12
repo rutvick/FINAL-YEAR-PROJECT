@@ -1,0 +1,6 @@
+#Folders that are ignored.
+.vscode/
+node_modules/
+
+#Files thar are ignored.
+package-lock.json

@@ -1,0 +1,557 @@
+<%- include('../includes/head.ejs') %>
+
+  <title>Website title - bootstrap html template</title>
+
+  <!-- Favicons -->
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+  <!-- jQuery -->
+  <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
+  <!-- Bootstrap4 files-->
+  <script src="../js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+  <!-- Font awesome 5 -->
+  <link href="../fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+
+  <!-- plugin: slickslider -->
+  <link href="plugins/slickslider/slick.css" rel="stylesheet" type="text/css" />
+  <link href="plugins/slickslider/slick-theme.css" rel="stylesheet" type="text/css" />
+  <script src="plugins/slickslider/slick.min.js"></script>
+
+
+  <!-- custom style -->
+  <link href="../css/ui.css" rel="stylesheet" type="text/css" />
+  <link href="../css/responsive.css" rel="stylesheet" />
+
+  <!-- custom javascript -->
+  <script src="../js/script.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    /// some script
+
+    // jquery ready start
+    $(document).ready(function () {
+      /////////////////  items slider. /plugins/slickslider/
+      if ($('.slider-banner-slick').length > 0) { // check if element exists
+        $('.slider-banner-slick').slick({
+          infinite: true,
+          autoplay: true,
+          slidesToShow: 1,
+          dots: false,
+          prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
+          nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
+        });
+      } // end if
+
+      /////////////////  items slider. /plugins/slickslider/
+      if ($('.slider-custom-slick').length > 0) { // check if element exists
+        $('.slider-custom-slick').slick({
+          infinite: true,
+          slidesToShow: 2,
+          dots: true,
+          prevArrow: $('.slick-prev-custom'),
+          nextArrow: $('.slick-next-custom')
+        });
+      } // end if
+
+
+
+      /////////////////  items slider. /plugins/slickslider/
+      if ($('.slider-items-slick').length > 0) { // check if element exists
+        $('.slider-items-slick').slick({
+          infinite: true,
+          swipeToSlide: true,
+          slidesToShow: 4,
+          dots: true,
+          slidesToScroll: 2,
+          prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
+          nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 640,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+      } // end if
+
+    });
+// jquery end
+  </script>
+
+  </head>
+
+  <body>
+
+    <header class="section-header">
+      <section class="header-top-light border-bottom">
+        <div class="container">
+          <nav class="d-flex flex-column flex-md-row">
+            <ul class="nav mr-auto d-none d-md-flex">
+              <li><a href="#" class="nav-link px-2"> <i class="fab fa-facebook"></i> </a></li>
+              <li><a href="#" class="nav-link px-2"> <i class="fab fa-instagram"></i> </a></li>
+              <li><a href="#" class="nav-link px-2"> <i class="fab fa-twitter"></i> </a></li>
+            </ul>
+            <ul class="nav">
+              <li><a class="nav-link px-2" href="/loggout"> <i class="fab fa-sign-out"></i>Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section class="header-main border-bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-3 col-sm-4 col-12">
+              <div class="brand-wrap">
+                <img class="logo" src="../images/360.jpg">
+              </div> <!-- brand-wrap.// -->
+            </div>
+          </div> <!-- col.// -->
+        </div> <!-- container.// -->
+      </section> <!-- header-main .// -->
+      <%- include('../includes/navigation.ejs') %>
+    </header> <!-- section-header.// -->
+    <br><br>
+    <!-- ==================  COMPONENT SLIDER BOOTSTRAP end.// ==================  .// -->
+    <div class="d-flex justify-content-center">
+      <br><br>
+      </aside> <!-- col.// -->
+      <aside class="col-lg-8">
+        <!-- ================ COMPONENT SLIDER  BOOTSTRAP FADE ====================  -->
+        <div id="carousel2_indicator" class="carousel slide carousel-fade" data-ride="carousel"
+          class="d-flex align-items-center">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="../" alt="First slide">
+              <article class="carousel-caption d-none d-md-block">
+                <!-- carousel-caption .// -->
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://cukusa.com/media/wysiwyg/asus/Asus_TUF_Gaming_A15_banner.jpg"
+                alt="Second slide">
+              <!-- carousel-caption .// -->
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100"
+                src="https://m.media-amazon.com/images/S/aplus-media/vc/57b03bad-42f1-4e56-aab9-56050a36275c._CR0,0,970,300_PT0_SX970__.jpg"
+                alt="Third slide">
+              <!-- carousel-caption .// -->
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel2_indicator" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel2_indicator" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <!-- ==================  COMPONENT SLIDER  BOOTSTRAP FADE end .// ==================  -->
+        <br><br>
+      </aside>
+    </div>
+    </div>
+
+    <!-- ========================= SECTION INTRO ========================= -->
+    <!--<section class="section-intro padding-y-sm">
+    <div class="container">
+    
+    <div class="intro-banner-wrap">
+        <img src="images/banners/1.png" class="img-fluid">
+    </div>
+    
+    </div> 
+    </section>-->
+    <!-- ========================= SECTION INTRO END// ========================= -->
+
+
+
+    <!-- ========================= SECTION FEATURE END// ========================= -->
+
+
+    <!-- ========================= SECTION CONTENT ========================= -->
+    <section class="section-content">
+      <div class="container">
+
+        <header class="section-heading">
+          <h3 class="section-title">Popular smartphones</h3>
+        </header><!-- sect-heading -->
+        <!-- ============== COMPONENT SLIDER ITEMS SLICK  ============= -->
+        <div class="slider-items-slick row" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
+          <div class="item-slide p-2">
+
+            <figure class="card card-product-grid mb-0">
+              <div class="img-wrap">
+
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-max-blue-hero?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1604021658000">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="/details">iphone12 pro max</a></h6>
+
+              </figcaption>
+            </figure>
+            <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/91BAitkzszL._SX679_.jpg"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="/details">samsung s21 ultra</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://www.gizmochina.com/wp-content/uploads/2019/08/Samsung-Galaxy-A50s.jpg"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">samsung galaxy a50s </a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://static.digit.in/default/db80c6f12355307b593c0af60ad5403adbd2ab06.jpeg?tr=n-product_detail_leader_thumb">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">samsung galaxy m31</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/51w4wX%2ByqcL._AC_SX679_.jpg"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Oneplus 7T</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://www.reliancedigital.in/medias/OnePlus-Nord-Gray-Onyx-12-256-491894434-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w1NDIxMDF8aW1hZ2UvanBlZ3xpbWFnZXMvaDVmL2g2NS85MzM3MjE1MzUyODYyLmpwZ3wzNzhmNWNhNDk0NmVhYjY0NzM0NTgzMjBjNjMxNGEwMjFjYjAyODM1NWY3M2M1YjcyMGVjMjE3YjM3MzhiYjM4">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Oneplus Nord</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/7199N-Uz2AL._SL1500_.jpg"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Google pixel 4a</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x2.jpg"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">poco x2</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img src="https://fdn2.gsmarena.com/vv/pics/realme/realme-7-pro-1.jpg"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">realme 7 pro</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://i01.appmifile.com/webfile/globalimg/in/cms/303D1336-249C-0113-DA94-01ED533069F8.jpg">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">redmi 9 prime</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://fdn.gsmarena.com/imgroot/news/20/07/realme-6i-india-official/-727x500m/gsmarena_005.jpg">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">realme 6i</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://i01.appmifile.com/webfile/globalimg/in/cms/58F356D1-538B-E4C7-0D9E-5266A9306F8E.jpg">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">redmi note 8 pro</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+        </div>
+        <!-- ============== COMPONENT SLIDER ITEMS SLICK .end // ============= -->
+        <br><br>
+
+
+
+
+
+      </div> <!-- container .//  -->
+    </section>
+    <!-- ========================= SECTION CONTENT END// ========================= -->
+
+
+
+    <!-- ========================= SECTION CONTENT ========================= -->
+    <section class="section-content">
+      <div class="container">
+
+        <header class="section-heading">
+          <h3 class="section-title">Popular Laptops</h3>
+        </header><!-- sect-heading -->
+        <!-- ============== COMPONENT SLIDER ITEMS SLICK  ============= -->
+        <!-- ============== COMPONENT SLIDER ITEMS SLICK  ============= -->
+        <div class="slider-items-slick row" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid mb-0">
+              <div class="img-wrap">
+                <img
+                  src="https://www.hp.com/us-en/shop/app/assets/images/product/8TC73AV_1/center_facing.png?_=1591781877749">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="/omen">HP Omen</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/81ZpUo-1I9L._SL1500_.jpg"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">HP 14</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWGCxD-9LFlhPZat_apbMlmCqZfYB7wePQCxN9fNqCUZIqxs9UTCORpcyYYFPOZJenXYjYJRs&usqp=CAc">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Dell Inspiron 15 3593</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKFbHUFBdZTM0aLMAszUEU-Mkp9l8DJfIsZA&usqp=CAU">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Lenovo Ligion 5</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm2sCddvERhC0JJotU2rDTMTMTbdhNyA61rkNw19DzfUGte4j0S-G6Bn-qBeM1G-bz8ZHlFBg&usqp=CAc">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Lenovo Ideapad Slim 3</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKgAmy6Ed4sFG2GQOxHBEd6uIm2W01g0t80rZIEl5k-KhFsFr4dF7B9uTYpg&usqp=CAc">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Asus Vivobook 14</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://i01.appmifile.com/webfile/globalimg/in/cms/BAB9AA16-2F78-781D-7E3D-1BEB0A224DF0.jpg">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Mi Horizon</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR218X09ctUEv4u9P8rwHQOycMFLwOKkuWEI2LVhWstLiIEl1gKaAZqDS6ws5Nao6DKsLNoZIbD&usqp=CAc">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Asus Vivobook Ultra</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwWMtvljTLafEqXxsFGklpDF9nIA6G4IB2XA&usqp=CAU">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Microsoft Surface Book 2</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdx2thTwL2VoyTi5lcaHu5ebj_dY8XGNRZrA&usqp=CAU">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Apple MAC Air</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+        </div>
+        <!-- ============== COMPONENT SLIDER ITEMS SLICK .end // ============= -->
+        <br><br>
+
+      </div> <!-- row.// -->
+
+      </div> <!-- container .//  -->
+    </section>
+    <!-- ========================= SECTION CONTENT END// ========================= -->
+
+
+    <!-- ============== COMPONENT SLIDER ITEMS SLICK .end // ============= -->
+    <br><br>
+
+
+
+    </div> <!-- container .//  -->
+    </section>
+    <!-- ========================= SECTION CONTENT END// ========================= -->
+
+
+
+    <!-- ========================= SECTION CONTENT ========================= -->
+    <section class="section-content padding-bottom-sm">
+      <div class="container">
+
+        <header class="section-heading">
+
+          <h3 class="section-title">Popular audio device</h3>
+        </header><!-- sect-heading -->
+        <!-- ============== COMPONENT SLIDER ITEMS SLICK  ============= -->
+        <div class="slider-items-slick row" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid mb-0">
+              <div class="img-wrap">
+
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWP22?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1591634795000">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Apple Airpods pro</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/719elVA3FvL._SL1500_.jpg"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">boat basshead 100 earphones</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/71hmrOIYvHL._SL1500_.jpg"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">boat airbass truebuds</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img src="https://images-na.ssl-images-amazon.com/images/I/41i%2BKMBAFjL.jpg">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">sony wh-ch10 wireless headphones</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/71ynIMjwgwL._SL1500_.jpg"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">JBL t460bt wireless headphones</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/61e9td4-rjL._SL1500_.jpg"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">realme buds wireless</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+          <div class="item-slide p-2">
+            <figure class="card card-product-grid  mb-0">
+              <div class="img-wrap"> <img
+                  src="data:image/jpeg;base64,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">
+              </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate"><a href="#">Zebronics zeb duke wireless headphones</a></h6>
+              </figcaption>
+            </figure> <!-- card // -->
+          </div>
+        </div>
+        <!-- ============== COMPONENT SLIDER ITEMS SLICK .end // ============= -->
+        <br><br>
+
+
+      </div><!-- container // -->
+    </section>
+    <!-- ========================= SECTION  END// ========================= -->
+
+
+
+    <!-- ========================= SECTION  ========================= -->
+    <section class="section-name padding-y">
+      <div class="container">
+      </div><!-- container // -->
+    </section>
+    <!-- ========================= SECTION  END// ======================= -->
+
+
+
+
+
+    <%- include('../includes/end.ejs') %>

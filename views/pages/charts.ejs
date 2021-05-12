@@ -1,0 +1,112 @@
+<%- include('../includes/head.ejs') %>
+    <!-- Favicons -->
+<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+<!-- jQuery -->
+<script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
+<!-- Bootstrap4 files-->
+<script src="../js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+<!-- Font awesome 5 -->
+<link href="../fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+
+<!-- plugin: slickslider -->
+<link href="plugins/slickslider/slick.css" rel="stylesheet" type="text/css" />
+<link href="plugins/slickslider/slick-theme.css" rel="stylesheet" type="text/css" />
+<script src="plugins/slickslider/slick.min.js"></script>
+
+
+<!-- custom style -->
+<link href="../css/ui.css" rel="stylesheet" type="text/css"/>
+<link href="../css/responsive.css" rel="stylesheet" />
+
+<!-- custom javascript -->
+<script src="../js/script.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+    <style>
+        .chart {
+            text-align: center;
+            margin: auto;
+        }
+
+        .row {
+            margin-bottom: 150px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+    </style>
+
+    <body>
+        <h2>Market Shares</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 chart">
+                    <canvas id="myChart" width="500" height="400"></canvas>
+                </div>
+                <div class="col-6 chart">
+                    <canvas id="myChart4" width="500" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+        <script>
+            let labels1 = ['Xiaomi', 'Realme', 'OnePlus', 'Apple', 'Samasung', 'Others'];
+            let data1 = [26, 12, 15, 7.6, 19, 22.4];
+            let colors1 = ['#49A9EA', '#36CAAB', '#34495E', '#B370CF', '#AC5353', '#CFD4D8'];
+
+            let myChart1 = document.getElementById("myChart").getContext('2d');
+
+            let chart1 = new Chart(myChart, {
+                type: 'pie',
+                data: {
+                    labels: labels1,
+                    datasets: [{
+                        data: data1,
+                        backgroundColor: colors1
+                    }]
+                },
+                options: {
+                    title: {
+                        text: "SmartPhones 2020 Market Share",
+                        display: true
+                    }
+                }
+            });
+
+
+
+            let labels4 = ['Lenovo', 'HP', 'Dell', 'Apple', 'Acer', 'Others'];
+            let data4 = [24, 22.4, 16.6, 7.6, 6.9, 22.4];
+            let colors4 = ['#49A9EA', '#36CAAB', '#34495E', '#B370CF', '#AC5353', '#CFD4D8'];
+
+            let myChart4 = document.getElementById("myChart4").getContext('2d');
+
+            let chart4 = new Chart(myChart4, {
+                type: 'pie',
+                data: {
+                    labels: labels4,
+                    datasets: [{
+                        data: data4,
+                        backgroundColor: colors4
+                    }]
+                },
+                options: {
+                    title: {
+                        text: "Laptops 2020 Market Share",
+                        display: true
+                    }
+                }
+            });
+
+        </script>
+
+        <%- include('../includes/end.ejs') %>

@@ -1,0 +1,21 @@
+{
+  "name": "final-year-project",
+  "version": "1.0.0",
+  "description": "Electronics Equipment Recommendation Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Rutvick Savaliya",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "util.promisify": "^1.1.1"
+  }
+}
